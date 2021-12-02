@@ -5,7 +5,7 @@ import java.security.MessageDigest
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = File("src", "$name.txt").readLines()
+fun readInput(name: String) = File("src", "$name.txt").readLines().dropLastWhile { it.isEmpty() }
 
 /**
  * Reads text from the given output txt file.
@@ -17,4 +17,4 @@ fun readOutput(name: String) = File("src", "$name.txt").readText().trim()
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
 
-fun List<String>.toInts() = mapNotNull { it.toIntOrNull() }
+fun List<String>.toInts() = map { it.toInt() }
