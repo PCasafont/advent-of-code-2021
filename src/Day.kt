@@ -7,7 +7,7 @@ abstract class Day(
     
     private fun runSolution(id: Int, solution: (List<String>) -> String) {
         // test if implementation meets criteria from the description, like:
-        val testInput = readInput("$name/test_input_$id")
+        val testInput = readInput("$name/test_input")
         val testOutput = readOutput("$name/test_output_$id")
         val testSolution = solution(testInput)
         check(testSolution == testOutput) {
@@ -15,7 +15,7 @@ abstract class Day(
         }
         println("$name #$id test has been successful!")
         
-        val input = readInput("$name/input_$id")
+        val input = readInput("$name/input")
         println("$name #$id solution: ${solution(input)}")
     }
     

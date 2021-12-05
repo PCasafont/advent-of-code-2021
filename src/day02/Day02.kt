@@ -1,6 +1,9 @@
 package day02
 
 import Day
+import Vec2
+import parseDirection
+import sum
 
 object Day02 : Day("day02") {
     

@@ -1,5 +1,3 @@
-package day02
-
 data class Vec2(
     val x: Int,
     val y: Int
@@ -10,6 +8,10 @@ data class Vec2(
 
 fun Int.horizontal() = Vec2(this, 0)
 fun Int.vertical() = Vec2(0, this)
+
+fun String.toVec2() = split(",").let {
+    Vec2(it[0].toInt(), it[1].toInt())
+}
 
 fun String.parseDirection() = split(" ").let {
     val command = it[0]
