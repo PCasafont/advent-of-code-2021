@@ -1,9 +1,8 @@
-package day99
+package day08
 
 import Day
-import toInts
 
-object Day99 : Day("day99") {
+object Day08 : Day("day08") {
     
     override fun solution1(input: List<String>): String {
         return ""
@@ -15,5 +14,5 @@ object Day99 : Day("day99") {
 }
 
 fun main() {
-    Day99.run()
+    Day08.run()
 }
